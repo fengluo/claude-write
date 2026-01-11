@@ -1,0 +1,62 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# VSCode specific
+.vscode/.DS_Store
+.vscode/settings.local.json
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup and temporary directories
+.backup/
+OLD_CONTENT/
+
+# Private notes
+**/PRIVATE/
+**/*.private.md
+**/*-private.md
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.tar.gz
+*.rar
+*.7z
+05_Attachments/videos/*.mp4
+05_Attachments/videos/*.mov
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# IDE
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace

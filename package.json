@@ -1,0 +1,33 @@
+{
+  "name": "vscode-claude-workspace",
+  "version": "1.0.0",
+  "description": "AI-powered content creation workspace with VSCode and Claude Code, using the PARA method for knowledge management",
+  "main": "scripts/setup/init-workspace.js",
+  "scripts": {
+    "init": "node scripts/setup/init-workspace.js",
+    "file:organize": "node scripts/file-management/organize-attachments.js",
+    "stats": "node scripts/stats/workspace-stats.js",
+    "stats:overview": "node scripts/stats/workspace-stats.js --overview",
+    "stats:tags": "node scripts/stats/workspace-stats.js --tags",
+    "stats:words": "node scripts/stats/workspace-stats.js --words",
+    "help": "node -e \"console.log('📚 Available commands:\\\\n\\\\n  npm run init           - Initialize workspace\\\\n  npm run file:organize  - Organize attachments\\\\n  npm run stats          - Generate workspace statistics\\\\n  npm run stats:overview - Quick overview\\\\n  npm run stats:tags     - Tag statistics\\\\n  npm run stats:words    - Word count statistics\\\\n')\""
+  },
+  "keywords": [
+    "claude",
+    "vscode",
+    "knowledge-management",
+    "para",
+    "second-brain",
+    "ai-assisted-writing",
+    "content-creation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "glob": "^10.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

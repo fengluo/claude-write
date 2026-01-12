@@ -32,13 +32,13 @@
 | 工作区搜索相关笔记 | ✅ | 内置于命令 |
 | 引导式提问 | ✅ | 内置于命令 |
 
-### 模块 2: 双模式工作流 - 写作模式 ⚠️ 部分完成
+### 模块 2: 双模式工作流 - 写作模式 ✅
 
 | 功能 | 状态 | 文件 |
 |------|------|------|
 | `/research-assistant` 命令 | ✅ | `.claude/commands/research-assistant.md` |
-| `/draft-content` 命令 | ❌ | 未实现 |
-| `/de-ai-ify` 命令 | ❌ | 未实现 |
+| `/draft-content` 命令 | ✅ | `.claude/commands/draft-content.md` |
+| `/de-ai-ify` 命令 | ✅ | `.claude/commands/de-ai-ify.md` |
 
 ### 模块 3: 收件箱处理 ✅
 
@@ -47,12 +47,12 @@
 | `/quick-capture` 命令 | ✅ | `.claude/commands/quick-capture.md` |
 | `/inbox-processor` 命令 | ✅ | `.claude/commands/inbox-processor.md` |
 
-### 模块 4: 定期回顾 ⚠️ 部分完成
+### 模块 4: 定期回顾 ✅
 
 | 功能 | 状态 | 文件 |
 |------|------|------|
 | `/daily-review` 命令 | ✅ | `.claude/commands/daily-review.md` |
-| `/weekly-synthesis` 命令 | ❌ | 未实现 |
+| `/weekly-synthesis` 命令 | ✅ | `.claude/commands/weekly-synthesis.md` |
 
 ### 模块 8: 辅助工具集 ✅
 
@@ -117,13 +117,9 @@
 
 ## 未完成功能
 
-### 优先级 P0 - 核心功能缺失
+### 优先级 P0 - 核心功能缺失 (已全部完成 ✅)
 
-| 模块 | 功能 | 描述 | 复杂度 |
-|------|------|------|--------|
-| 模块 2 | `/draft-content` | 基于大纲生成初稿 | 中 |
-| 模块 2 | `/de-ai-ify` | 移除 AI 写作痕迹，增加个人风格 | 中 |
-| 模块 4 | `/weekly-synthesis` | 周度综合回顾，发现模式 | 中 |
+所有 P0 级核心功能已实现。
 
 ### 优先级 P1 - 重要增强功能
 
@@ -166,19 +162,19 @@
 
 #### 任务清单
 
-- [ ] 创建 `/draft-content` 命令
+- [x] 创建 `/draft-content` 命令
   - 读取当前文件或指定大纲
   - 基于大纲生成初稿
   - 标注需要补充的部分
   - 保存到指定位置
 
-- [ ] 创建 `/de-ai-ify` 命令
+- [x] 创建 `/de-ai-ify` 命令
   - 分析文本中的 AI 写作痕迹
   - 建议替换的短语和句式
   - 交互式修改
   - 保持原意的同时增加个人风格
 
-- [ ] 创建 `/weekly-synthesis` 命令
+- [x] 创建 `/weekly-synthesis` 命令
   - 分析过去 7 天的笔记
   - 生成本周统计
   - 识别浮现的主题
@@ -292,9 +288,9 @@
 | 模块 | 完成度 | 说明 |
 |------|--------|------|
 | 模块 1: 初始化向导 | 100% | 完全实现 |
-| 模块 2: 双模式工作流 | 60% | 缺少 draft-content, de-ai-ify |
+| 模块 2: 双模式工作流 | 100% | 完全实现 |
 | 模块 3: 收件箱处理 | 100% | 完全实现 |
-| 模块 4: 定期回顾 | 50% | 缺少 weekly-synthesis |
+| 模块 4: 定期回顾 | 100% | 完全实现 |
 | 模块 5: 智能升级 | 0% | 未实现 |
 | 模块 6: 视觉分析 | 0% | 需要 MCP 集成 |
 | 模块 7: 网页研究 | 100% | 完全实现 (基础版) |
@@ -306,8 +302,8 @@
 ### 总体完成度
 
 ```
-已实现功能: 25/37 (68%)
-核心功能:   22/25 (88%)
+已实现功能: 28/37 (76%)
+核心功能:   25/25 (100%)
 增强功能:   3/12  (25%)
 ```
 
@@ -315,12 +311,10 @@
 
 ## 下一步行动
 
-1. **立即开始**: 实现 `/weekly-synthesis` 命令 (与 `/daily-review` 类似，复杂度较低)
-2. **然后**: 实现 `/draft-content` 和 `/de-ai-ify` 命令
-3. **接着**: 创建 Agent 定义和 CLAUDE.md 模板
-4. **重要**: 设计工具分发机制 (解决 git clone 历史问题)
-5. **规划**: 设计定时任务系统架构
-6. **最后**: 实现 `/upgrade` 和 `/create-command` 命令
+1. **立即开始**: 创建 Agent 定义 (writer, researcher, editor) 和 CLAUDE.md 模板 (P1 阶段)
+2. **然后**: 设计工具分发机制 (解决 git clone 历史问题)
+3. **接着**: 设计定时任务系统架构
+4. **最后**: 实现 `/upgrade` 和 `/create-command` 命令
 
 ---
 

@@ -234,7 +234,7 @@ npm run web:batch -- urls.txt       # 批量保存 URL 列表
 
 建议频率：
 - **每日**: 使用 `/daily-review`
-- **每周**: 清空收件箱，使用 `/inbox-processor`
+- **每周**: 清空收件箱 (`/inbox-processor`)，进行周度综合 (`/weekly-synthesis`)
 - **每月**: 回顾项目进展，归档已完成内容
 
 ### 3. 建立连接

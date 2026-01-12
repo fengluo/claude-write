@@ -8,6 +8,8 @@
   },
   "scripts": {
     "init": "node scripts/setup/init-workspace.js",
+    "create-command": "node scripts/setup/create-command.js",
+    "upgrade": "node scripts/setup/upgrade.js",
     "file:organize": "node scripts/file-management/organize-attachments.js",
     "file:orphans": "node scripts/file-management/find-orphans.js",
     "file:compress": "node scripts/file-management/compress-images.js",

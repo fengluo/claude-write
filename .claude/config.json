@@ -7,7 +7,12 @@
   "features": {
     "auto_sync": true,
     "smart_commit": true,
-    "daily_review_reminder": false
+    "daily_review_reminder": true
+  },
+  "scheduler": {
+    "daily_review": "0 21 * * *",
+    "weekly_synthesis": "0 18 * * 0",
+    "auto_sync": "0 */4 * * *"
   },
   "paths": {
     "inbox": "00_Inbox",

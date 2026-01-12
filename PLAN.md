@@ -205,23 +205,11 @@
   - 方案：创建了 `bin/claude-write.js` CLI 工具，支持脚手架创建新工作区
   - 文档：`06_Meta/Docs/distribution-design.md`
 
-- [ ] 设计定时任务系统
-  - 目标场景：
-    - 每日提醒：运行 `/daily-review`
-    - 每周提醒：整理收件箱、运行 `/weekly-synthesis`
-    - 定时备份：自动 git commit/push
-    - 定时统计：生成活跃度报告
-    - 截止日期提醒：项目 deadline 通知
-  - 技术方案探索：
-    - 使用 node-cron 在后台运行守护进程
-    - 集成系统 cron/launchd/Task Scheduler
-    - 使用 VSCode 扩展提供提醒 UI
-    - 创建轻量级提醒服务
-  - 需要决定：
-    - 提醒方式：系统通知 vs VSCode 通知 vs 终端提示
-    - 任务配置存储位置和格式
-    - 是否需要 GUI 配置界面
-    - 如何处理错过的定时任务
+- [x] 设计定时任务系统
+  - 目标场景：每日提醒、每周回顾、自动备份
+  - 方案：基于 `node-cron` 的守护进程 (`npm run daemon`)
+  - 实现：创建了 `scripts/scheduler/daemon.js`
+  - 文档：`06_Meta/Docs/scheduled-tasks-design.md`
 
 - [x] 创建 AI Agent 定义
   - `06_Meta/Agents/writer.md` - 写作助手
@@ -289,26 +277,26 @@
 | 模块 7: 网页研究 | 100% | 完全实现 (基础版) |
 | 模块 8: 辅助工具 | 100% | 完全实现 |
 | 模块 9: 命令创建器 | 0% | 未实现 |
-| 分发系统 | 0% | 待设计 - 解决 git 历史问题 |
-| 定时任务 | 0% | 待设计 - 提醒与定时处理 |
+| 分发系统 | 100% | 已实现 CLI 脚手架 (`bin/claude-write.js`) |
+| 定时任务 | 100% | 已实现守护进程 (`npm run daemon`) |
 | 项目结构 | 100% | Agents, CLAUDE.md, config.json 全部完成 |
 
 ### 总体完成度
 
 ```
-已实现功能: 31/37 (84%)
+已实现功能: 33/37 (89%)
 核心功能:   25/25 (100%)
-增强功能:   6/12  (50%)
+增强功能:   8/12  (67%)
 ```
 
 ---
 
 ## 下一步行动
 
-1. **立即开始**: 设计工具分发机制 (解决 git clone 历史问题)
-2. **然后**: 设计定时任务系统架构
-3. **接着**: 实现 `/upgrade` 命令 (P1 阶段)
-4. **最后**: 实现 `/create-command` 命令
+1. **立即开始**: 实现 `/upgrade` 命令 (用于更新工具脚本)
+2. **然后**: 实现 `/create-command` 命令 (自定义命令生成器)
+3. **接着**: 完善文档 (添加定时任务和分发系统的使用说明)
+4. **最后**: 开始 P2 阶段 (Gemini Vision, Firecrawl 集成)
 
 ---
 

@@ -94,9 +94,24 @@ vscode-claude-workspace/
 │   └── snippets/          # 代码片段
 └── scripts/               # 自动化脚本
     ├── setup/             # 初始化
+    │   └── init-workspace.js
     ├── file-management/   # 文件管理
+    │   ├── organize-attachments.js
+    │   ├── find-orphans.js
+    │   └── compress-images.js
     ├── stats/             # 统计分析
+    │   ├── workspace-stats.js
+    │   ├── word-count.js
+    │   └── activity-tracker.js
+    ├── git/               # Git 自动化
+    │   ├── smart-commit.js
+    │   └── auto-sync.js
+    ├── web/               # 网页保存
+    │   ├── save-article.js
+    │   └── batch-save.js
     └── utils/             # 工具函数
+        ├── file-helpers.js
+        └── markdown-parser.js
 ```
 
 ## 核心概念
@@ -169,17 +184,39 @@ AI 作为思考伙伴，通过提问帮你澄清和深化想法。不会直接�
 # 初始化工作区 (交互式向导)
 npm run init
 
-# 整理附件 (按类型分类，检测孤儿文件)
-npm run file:organize
-
-# 生成工作区统计
-npm run stats            # 完整报告
-npm run stats:overview   # 快速概览
-npm run stats:tags       # 标签统计
-npm run stats:words      # 字数统计
-
 # 查看帮助
 npm run help
+```
+
+### 文件管理
+
+```bash
+npm run file:organize    # 整理附件 (按类型分类到子目录)
+npm run file:orphans     # 查找未被引用的孤儿附件
+npm run file:compress    # 压缩大图片 (支持 --dry-run 预览)
+```
+
+### 统计分析
+
+```bash
+npm run stats            # 完整工作区统计报告
+npm run stats:overview   # 快速概览
+npm run stats:words      # 按项目/标签/文件夹统计字数
+npm run stats:activity   # 30天活跃度分析 (热力图、时段分布)
+```
+
+### Git 自动化
+
+```bash
+npm run git:smart-commit # 智能提交 (分析变更自动生成提交信息)
+npm run git:sync         # 自动同步 (检测差异，自动拉取/推送)
+```
+
+### 网页保存
+
+```bash
+npm run web:save -- "https://example.com/article"  # 保存单个网页
+npm run web:batch -- urls.txt                       # 批量保存 URL 列表
 ```
 
 ## VSCode 功能
@@ -304,6 +341,35 @@ npm run help
 - **任务**: 编辑 `.vscode/tasks.json`
 - **代码片段**: 编辑 `.vscode/snippets/markdown.json`
 
+## 命令速查表
+
+### Claude 命令
+
+| 命令 | 用途 |
+|------|------|
+| `/thinking-partner` | 思考伙伴 - 探索想法，深化理解 |
+| `/quick-capture` | 快速捕获 - 零摩擦记录想法 |
+| `/inbox-processor` | 收件箱处理 - 智能整理笔记 |
+| `/research-assistant` | 研究助手 - 深度研究主题 |
+| `/daily-review` | 每日回顾 - 统计与反思 |
+
+### npm 脚本
+
+| 命令 | 用途 |
+|------|------|
+| `npm run help` | 显示所有可用命令 |
+| `npm run init` | 初始化工作区 |
+| `npm run file:organize` | 整理附件 |
+| `npm run file:orphans` | 查找孤儿附件 |
+| `npm run file:compress` | 压缩图片 |
+| `npm run stats` | 完整统计报告 |
+| `npm run stats:words` | 字数统计 |
+| `npm run stats:activity` | 活跃度分析 |
+| `npm run git:smart-commit` | 智能提交 |
+| `npm run git:sync` | 自动同步 |
+| `npm run web:save` | 保存网页 |
+| `npm run web:batch` | 批量保存网页 |
+
 ## 文档
 
 详细文档位于 `06_Meta/Docs/`:
@@ -329,7 +395,31 @@ git remote add origin [your-repo-url]
 git push -u origin main
 ```
 
-### 建议的提交习惯
+### 使用智能提交 (推荐)
+
+使用内置的智能提交工具，自动分析变更并生成提交信息：
+
+```bash
+# 交互模式 - 显示变更摘要，建议提交信息
+npm run git:smart-commit
+
+# 自动模式 - 直接使用建议的提交信息
+npm run git:smart-commit -- --auto
+```
+
+### 自动同步
+
+检测本地与远程的差异，自动拉取或推送：
+
+```bash
+# 自动同步
+npm run git:sync
+
+# 使用 rebase 方式合并远程更新
+npm run git:sync -- --rebase
+```
+
+### 手动提交 (备选)
 
 ```bash
 # 每天结束时提交

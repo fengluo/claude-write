@@ -199,15 +199,30 @@ AI 会分析每个文件并建议移动到合适的位置。
 ## 自动化脚本
 
 ```bash
-# 查看工作区统计
-npm run stats
-
-# 整理附件
-npm run file:organize
-
-# 查看帮助
+# 查看所有可用命令
 npm run help
+
+# 文件管理
+npm run file:organize    # 整理附件 (按类型分类)
+npm run file:orphans     # 查找未引用的附件
+npm run file:compress    # 压缩大图片
+
+# 统计分析
+npm run stats            # 完整工作区统计
+npm run stats:overview   # 快速概览
+npm run stats:words      # 按项目/标签统计字数
+npm run stats:activity   # 30天活跃度分析
+
+# Git 自动化
+npm run git:smart-commit # 智能提交 (分析变更生成提交信息)
+npm run git:sync         # 自动同步 (拉取/推送)
+
+# 网页保存
+npm run web:save -- "URL"           # 保存单个网页为 Markdown
+npm run web:batch -- urls.txt       # 批量保存 URL 列表
 ```
+
+详细用法请参考 [[commands-reference]]。
 
 ## 最佳实践
 

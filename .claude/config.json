@@ -1,0 +1,35 @@
+{
+  "system": {
+    "version": "1.0.0",
+    "language": "zh-CN",
+    "theme": "default"
+  },
+  "features": {
+    "auto_sync": true,
+    "smart_commit": true,
+    "daily_review_reminder": false
+  },
+  "paths": {
+    "inbox": "00_Inbox",
+    "projects": "01_Projects",
+    "areas": "02_Areas",
+    "resources": "03_Resources",
+    "archive": "04_Archive",
+    "attachments": "05_Attachments",
+    "templates": "06_Meta/Templates"
+  },
+  "aliases": {
+    "tp": "thinking-partner",
+    "qc": "quick-capture",
+    "ip": "inbox-processor",
+    "ra": "research-assistant",
+    "dr": "daily-review",
+    "ws": "weekly-synthesis",
+    "dc": "draft-content",
+    "dai": "de-ai-ify"
+  },
+  "defaults": {
+    "image_compression_quality": 85,
+    "web_save_directory": "03_Resources/Articles"
+  }
+}

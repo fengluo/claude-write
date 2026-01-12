@@ -22,10 +22,14 @@
 
 ### 安装
 
-1. **克隆或下载此仓库**
+#### 方法 1: 使用 CLI 创建新工作区 (推荐)
+
+这种方法会创建一个不包含工具开发历史的干净工作区。
+
+1. **克隆工具仓库**
    ```bash
-   git clone [your-repo-url]
-   cd claude-write
+   git clone https://github.com/fengluo/claude-write.git claude-write-tool
+   cd claude-write-tool
    ```
 
 2. **安装依赖**
@@ -33,8 +37,35 @@
    npm install
    ```
 
-3. **初始化工作区（可选）**
-   如果你想使用交互式向导配置工作区:
+3. **创建你的工作区**
+   ```bash
+   # 在同级目录下创建一个名为 my-knowledge-base 的新工作区
+   ./bin/claude-write.js ../my-knowledge-base
+   ```
+
+4. **开始使用**
+   ```bash
+   cd ../my-knowledge-base
+   code .
+   npm run init  # 初始化配置
+   ```
+
+#### 方法 2: 直接克隆 (开发模式)
+
+如果你想参与 Claude Write 的开发，或者不在意 Git 历史：
+
+1. **克隆仓库**
+   ```bash
+   git clone https://github.com/fengluo/claude-write.git my-workspace
+   cd my-workspace
+   ```
+
+2. **安装依赖**
+   ```bash
+   npm install
+   ```
+
+3. **初始化**
    ```bash
    npm run init
    ```

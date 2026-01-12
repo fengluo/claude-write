@@ -199,18 +199,11 @@
   - 生成命令模板
   - 创建相关模板文件
 
-- [ ] 设计工具分发机制
+- [x] 设计工具分发机制
   - 问题：git clone 会包含 Claude Write 的完整 git 历史
   - 用户不需要工具的开发历史，只需要干净的工作区
-  - 方案探索：
-    - 发布 npm 包，通过 npx 初始化新工作区
-    - 提供 zip 下载包（GitHub Releases）
-    - 创建 degit 脚本 (`npx degit user/repo`)
-    - 构建独立安装脚本（curl | bash 方式）
-  - 需要决定：
-    - 用户工作区与工具代码是否分离
-    - 如何处理工具更新与用户自定义内容的合并
-    - 是否支持多个工作区共享同一工具安装
+  - 方案：创建了 `bin/claude-write.js` CLI 工具，支持脚手架创建新工作区
+  - 文档：`06_Meta/Docs/distribution-design.md`
 
 - [ ] 设计定时任务系统
   - 目标场景：

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Claude Write - AI-powered content creation and knowledge management system using PARA method",
   "main": "scripts/setup/init-workspace.js",
+  "bin": {
+    "claude-write": "./bin/claude-write.js"
+  },
   "scripts": {
     "init": "node scripts/setup/init-workspace.js",
     "file:organize": "node scripts/file-management/organize-attachments.js",

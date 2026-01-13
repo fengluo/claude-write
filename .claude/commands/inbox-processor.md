@@ -49,6 +49,18 @@
 | question + 需探索 | 保留，建议使用 `/thinking-partner` | 值得深入思考 |
 | 不再相关 | `04_Archive/` | 过时或放弃 |
 
+**模板优先规则（新建目标）**：
+- 当建议目标为“新建目录”（Projects/Areas/Resources 等），先检查目标区域内的 `_template/`
+- 若目标区域无模板或不匹配，再从 `06_Meta/Templates/` 选择合适模板
+- 若仍不匹配或用户希望自定义，允许用户指定模板路径或跳过模板创建
+
+**Front Matter 统一规则（迁移时必须遵守）**：
+- Front Matter 是唯一元信息来源，正文不重复写状态/日期/标签等元信息
+- 以目标模板的 Front Matter 为基底合并 Inbox 的 Front Matter
+- `created` 保留原值，`updated` 设为处理时间
+- `tags` 合并去重
+- `status` 按目标类型设置（项目: `planning`，领域: `active`，资源: `active`，归档: `archived`）
+
 ### 3. 展示建议
 
 格式化显示每个项目：
@@ -102,7 +114,7 @@
 建议: 移动到 01_Projects/React-Hooks-Tutorial/
 
 选择操作:
-[M] 移动到建议位置
+[M] 移动到建议位置（如为新项目，先按模板创建）
 [E] 编辑后再决定
 [D] 删除/归档
 [S] 跳过（保留在收件箱）
@@ -128,8 +140,11 @@
 
 **移动文件**：
 - 使用 Bash `mv` 命令
-- 更新 Front Matter 的 `status: processed`
-- 如果目标是项目，询问是否更新项目 README
+- 合并并更新 Front Matter（遵循统一规则），不要把元信息写入正文
+- 如果目标是新建目录（Projects/Areas/Resources 等）：
+  - 先从目标区域 `_template/` 复制模板到新目录
+  - 若模板缺失或用户指定，从 `06_Meta/Templates/` 复制合适模板
+  - 询问是否需要将收件箱正文补充进目标主文档（不包含 Front Matter）
 
 **提取行动项**：
 - 读取内容，识别任务

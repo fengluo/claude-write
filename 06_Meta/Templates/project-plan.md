@@ -1,20 +1,17 @@
 ---
 title: {Project Name}
+type: project
 status: planning | in-progress | completed | on-hold
+tags: [project]
+created: {date}
+updated: {date}
 start_date: {date}
 deadline: {date}
-tags: [project]
+owner:
+priority: high | medium | low
 ---
 
 # {Project Name}
-
-## 项目信息
-
-- **状态**: 未开始
-- **开始日期**:
-- **截止日期**:
-- **负责人**:
-- **优先级**: 高 | 中 | 低
 
 ## 目标
 

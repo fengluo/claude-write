@@ -1,11 +1,17 @@
+---
+title: {Project Name}
+type: project
+status: planning
+tags: [project]
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+start_date: YYYY-MM-DD
+deadline: YYYY-MM-DD
+owner:
+priority: high | medium | low
+---
+
 # 项目名称
-
-## 项目信息
-
-- **状态**: 未开始 / 进行中 / 已完成 / 暂停
-- **开始日期**: YYYY-MM-DD
-- **截止日期**: YYYY-MM-DD
-- **标签**: #tag1 #tag2
 
 ## 目标
 

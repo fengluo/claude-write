@@ -1,15 +1,16 @@
 ---
 title: {Meeting Title}
-date: {date}
-attendees: []
+type: meeting-note
+status: completed
 tags: [meeting]
+created: {date} {time}
+updated: {date} {time}
+date: {date}
+time: {time}
+attendees: []
 ---
 
 # {Meeting Title}
-
-**日期**: {date}
-**时间**: {time}
-**参会人**:
 
 ## 议程
 

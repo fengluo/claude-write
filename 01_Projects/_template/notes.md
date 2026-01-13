@@ -1,3 +1,12 @@
+---
+title: {Project Name} - Notes
+type: project-notes
+status: active
+tags: [project, notes]
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+---
+
 # 工作笔记
 
 ## YYYY-MM-DD

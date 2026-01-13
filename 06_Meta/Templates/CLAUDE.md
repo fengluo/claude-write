@@ -1,3 +1,12 @@
+---
+title: Claude Code Configuration
+type: system-config
+status: active
+tags: [claude, config]
+created: {date}
+updated: {date}
+---
+
 # Claude Code Configuration
 
 ## Project Information

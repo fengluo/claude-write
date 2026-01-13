@@ -1,3 +1,12 @@
+---
+title: {Project Name} - References
+type: project-references
+status: active
+tags: [project, references]
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+---
+
 # 参考资料
 
 ## 文章

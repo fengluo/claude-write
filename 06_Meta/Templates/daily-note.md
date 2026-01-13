@@ -1,7 +1,11 @@
 ---
 title: Daily Note - {date}
-date: {date}
+type: daily-note
+status: active
 tags: [daily-note]
+created: {date}
+updated: {date}
+date: {date}
 ---
 
 # Daily Note - {date}

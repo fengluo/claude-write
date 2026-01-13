@@ -1,20 +1,22 @@
 ---
 title: {Article Title}
-date: {date}
-tags: [article, draft]
+type: article-draft
 status: draft
+tags: [article, draft]
+created: {date}
+updated: {date}
+date: {date}
 target_audience:
 word_count_goal:
+publication:
 ---
 
 # {Article Title}
 
-## 元信息
+## 定位与价值
 
-- **目标读者**:
-- **核心价值**: 读者能学到什么
-- **预计字数**:
-- **发布平台**:
+- 核心价值:
+- 关键论点:
 
 ## 概要
 

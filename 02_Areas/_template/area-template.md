@@ -1,3 +1,13 @@
+---
+title: {Area Name}
+type: area
+status: active
+tags: [area]
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+health: good | needs-attention | critical
+---
+
 # 领域名称
 
 ## 概述
@@ -6,8 +16,8 @@
 
 ## 当前状态
 
-- **最后更新**: YYYY-MM-DD
-- **健康度**: 🟢 良好 / 🟡 需要关注 / 🔴 需要改进
+- 主要关注:
+- 风险/阻碍:
 
 ## 标准和原则
 

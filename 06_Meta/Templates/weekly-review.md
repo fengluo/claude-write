@@ -1,9 +1,13 @@
 ---
 title: Weekly Review - {week}
+type: weekly-review
+status: complete
+tags: [weekly-review, reflection]
+created: {date}
+updated: {date}
 date: {date}
 week_start: {week_start}
 week_end: {week_end}
-tags: [weekly-review, reflection]
 ---
 
 # Weekly Review - {week}
